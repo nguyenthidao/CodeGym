@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hobby && Register</title>
+    <style>
+        .hobby{
+            width: 30%;
+            background-color: #42d1f4;
+            padding: 10px;
+        }
+        .hobby form{
+            border: 4px solid #42d1f4;
+            background-color: #ffffff;
+        }
+        .hobby .title{
+            background-color: #f4424e;
+            text-align: center;
+            font-size: 17px;
+            margin: 5px;
+        }
+        .hobby .yourname{
+            float: left;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="hobby">
+        <form>
+            <div class="title">
+                <span>So thich cua ban</span>
+            </div>
+            <div class="yourname">
+                Ho va ten: <input type="text" name="yourname">
+                Email: <input type="email" name="email"/>
+            </div>
+            <div>
+                <label name="hobby">So thich</label>
+                <input type="checkbox" id="sport" name="hobby" />
+                <label for="sport">The thao</label>
+                <input type="checkbox" id="surfingWeb" name="hobby" />
+                <label for="surfingWeb">Luot web</label>
+                <input type="checkbox" id="traving" name="hobby" />
+                <label for="traving">Du lich</label>
+                <input type="checkbox" id="music" name="hobby" />
+                <label for="music">Am nhac</label>
+                <input type="checkbox" id="playingGame" name="hobby" />
+                <label for="playingGame">Choi game</label>
+                <input type="checkbox" id="readingBook" name="hobby" />
+                <label for="readingBook">Doc sach</label>
+                <input type="checkbox" id="film" name="hobby" />
+                <label for="film">Dien anh</label>
+            </div>
+            <div class="btn">
+                <input type="submit" value="Gui thong tin">
+                <input type="reset" value="Nhap lai">
+            </div>
+        </form>
+    </div>
+    <div class="register">
+        <form action="">
+            <fieldset>
+                <label for="yourname">Ho va ten</label>
+                <input type="text" name="yourname" id="yourname"/>
+                <label for="birthday">Ngay sinh</label>
+                <input type="text" name="birthday" id="birthday" />
+
+                <label>Gioi tinh</label>
+                <input type="radio" name="gender" id="male" value="Male"/>Male<br>
+                <input type="radio" name="gender" id="female" value="Female"/>Female<br>
+
+                <label for="adress">Dia chi</label>
+                <textarea rows="5" cols="50" id="adress"></textarea>
+
+                <label for="class">Lop</label>
+                <select name="class" id="class">
+                    <option>-Chon lop-</option>
+                    <option value="one">one</option>
+                    <option value="two">two</option>
+                </select>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email"/>
+
+                <label for="phone">Dien Thoai</label>
+                <input type="number" name="phone" id="phone"/>
+
+                <input type="submit" value="Dang ky">
+                <input type="reset" value="Nhap lai">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
