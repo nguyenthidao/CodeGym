@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me?</title>
+    <style>
+        .btn-fun{
+            position: relative;
+            top: 20px;
+            left: 25px;
+        }
+        .yes{
+            position: relative;
+            margin-right: 15px;
+        }
+        .no{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Do you love me?
+    </p>
+    <div class="btn-fun">
+        <button type="button" class="yes" id="yes" onclick="yesClick();">Yes</button>
+        <button type="button" class="no" id="no" onmouseover="noHover();">No</button>
+    </div>
+
+    <script>
+        function yesClick() {
+            alert("Yes. You are right!");
+        }
+
+        function noHover() {
+            var top = document.getElementById('no').offsetTop;
+            var left =  document.getElementById('no').offsetLeft;
+            top = x_random(top);
+            left = x_random(left);
+            document.getElementById('no').style.top = top + 'px';
+            document.getElementById('no').style.left = left + 'px';
+        }
+
+        function x_random(x) {
+            var maxHeight = window.innerHeight;
+            var maxWidth = window.innerWidth;
+            var numberRandom = Math.floor(Math.random()*700+1);
+
+            if (numberRandom !== x && numberRandom>0 && numberRandom<maxHeight && numberRandom<maxWidth){
+                return numberRandom;
+            }else {
+                x_random(x);
+            }
+        }
+    </script>
+</body>
+</html>

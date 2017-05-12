@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea</title>
+</head>
+<body>
+    <div>
+        <div>Hello, baby.</div>
+        <div>
+            <textarea rows="4" cols="50" id="faking" onkeydown="faking();"></textarea>
+        </div>
+    </div>
+
+    <script>
+        function faking() {
+            var textUser = document.getElementById('faking').value;
+            var defaultText = "You are beautiful!";
+            var index;
+
+            for(index = 0; index < textUser.length; index++){
+                
+            }
+        }
+    </script>
+</body>
+</html>
+
