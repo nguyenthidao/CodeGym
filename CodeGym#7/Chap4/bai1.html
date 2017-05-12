@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien te</title>
+    <style>
+        .currencyConversion{
+            font-family: Arial;
+            font-size: 13px;
+        }
+        form div{
+         display: inline-block;
+           padding: 0 20px;
+           text-align: center;
+        }
+        span, select{
+            display: block;
+            padding: 10px;
+        }
+        select{
+            width: 100px;
+        }
+        .convert button{
+            background-color: #f46842;
+        }
+    </style>
+</head>
+<body>
+    <div class="currencyConversion">
+        <form>
+            <div class="amount">
+                <span>Amount</span>
+                <input type="text" id="amount">
+            </div>
+            <div class="fromCurrency">
+                <span>From Currency</span>
+                <select id="fromCurrency">
+                    <option value="1" selected>VND</option>
+                    <option value="22722.1">USD</option>
+                    <option value="24731.5">EUR</option>
+                </select>
+            </div>
+            <div class="toCurrency">
+                <span>To Currency</span>
+                <select id="toCurrency">
+                    <option value="1">VND</option>
+                    <option value="22722.1" selected>USD</option>
+                    <option value="24731.5">EUR</option>
+                </select>
+            </div>
+            <div class="convert">
+                <button type="button" onclick="currentConversion();">Convert</button>
+            </div>
+            <input type="hidden" id="result">
+        </form>
+    </div>
+    <script>
+        function currentConversion() {
+            var f = document.getElementById('fromCurrency').value;
+            var t = document.getElementById('toCurrency').value;
+            var a= checkNumber();
+
+            if(a != false){
+                document.getElementById('result').type='text';
+                document.getElementById('result').value = a * f/t;
+            }
+        }
+
+        function checkNumber(){
+            var a = document.getElementById('amount').value;
+
+            if(isNaN(a)){
+                alert("Must input numbers!");
+                return false;
+            }
+
+            return a;
+        }
+    </script>
+</body>
+</html>
