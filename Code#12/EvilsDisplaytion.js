@@ -20,20 +20,8 @@ function evil_creator(evil){
         this.evil_image.id = evil_id;
     };
 
-    this.set_path_evil_image = function (evil_image_path) {
-        this.evil_image.src = evil_image_path;
-    };
-
-    this.set_evil_horizontal_position = function (size_unit) {
-        this.evil_image.style.left = evil.set_horizontal_position + size_unit;
-    };
-
-    this.set_evil_vertical_position = function (vertical_position, size_unit) {
-        this.evil_image.style.top  = evil.set_vertical_position + size_unit;
-    };
+    
 }
-
-
 
 function evils_creation() {
     var evils = [];
@@ -45,7 +33,7 @@ function evils_creation() {
         var evil_horizontal_position = Math.floor((Math.random() * 100) + 1);
         evil.create_evil_image();
         evil.set_evil_id("evil" + i);
-        evil.set_path_evil_image("evil.jpg");
+        evil.set_path_evil_image("evil.jpeg");
         evil.set_evil_horizontal_position(evil_horizontal_position,"px");
         evil.set_evil_vertical_position(evil_vertical_position,"px");
         evils[i] = evil;

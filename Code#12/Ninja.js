@@ -10,6 +10,14 @@ function ninja() {
         this.power = power;
     };
 
+    this.get_image_path = function(){
+        return this.image_path;
+    };
+
+    this.set_image_path = function(image_path){
+        this.image_path = image_path;
+    };
+
     this.get_defensive_number = function () {
         return this.defensive_number;
     };
@@ -45,22 +53,23 @@ function ninja() {
         const KEY_TURN_LEFT  = 37;
         const KEY_TURN_RIGHT = 39;
 
-
-        if(key_press === KEY_TURN_DOWN){
+        if(key_press === KEY_TURN_DOWN && this.get_vertical_position() < 500){
             current_vertical_position += jump_unit;
             console.log('down');
             this.set_vertical_position(current_vertical_position);
-        }else if(key_press === KEY_TURN_RIGHT){
+        }else if(key_press === KEY_TURN_RIGHT && this.get_horizontal_position() < 735){
             current_horizontal_position += jump_unit;
             this.set_horizontal_position(current_horizontal_position);
-        }else if(key_press === KEY_TURN_UP){
+            console.log('right');
+        }else if(key_press === KEY_TURN_UP && this.get_vertical_position() > 0){
             current_vertical_position -= jump_unit;
             this.set_vertical_position(current_vertical_position);
-        }else if(key_press === KEY_TURN_LEFT){
+            console.log('up');
+        }else if(key_press === KEY_TURN_LEFT && this.get_horizontal_position() >0){
             current_horizontal_position -= jump_unit;
             this.set_horizontal_position(current_horizontal_position);
+            console.log('left');
         }
-
     };
 
     this.launching_attacks = function () {
@@ -72,16 +81,10 @@ function ninja() {
     };
 }
 
-ninja = new ninja();
 
-ninja.set_horizontal_position(0);
-ninja.set_vertical_position(0);
-displaytion = new displaytion();
 
-function key_press(event) {
-    ninja.move(event.which);
-    displaytion.show_ninja(ninja);
-}
+
+
 
 
 

@@ -1,24 +1,12 @@
 .map{
     position: absolute;
-    width: 100%;
-    left: 10px;
-    top: 10px;
-    bottom: 10px;
-    background-color: #555555;
+    width: 800px;
+    height: 600px;
+    left: 50px;
+    top: 30px;
+    background-color: #555;
 }
 
-.ninja img{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 5%;
-    height: auto;
-}
-
-.evil img{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 10%;
-    height: auto;
+img{
+    height: 100px;
 }
